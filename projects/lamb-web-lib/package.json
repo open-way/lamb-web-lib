@@ -4,6 +4,10 @@
   "descripcion": "Librería de componentes personalizados para el proyecto Lamb Financial de la Universidad Peruana Unión.",
   "author": "Vitmar J. Aliaga Cruz.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-way/lamb-web-lib"
+  },
   "keywords": [
     "angular",
     "lamb",
