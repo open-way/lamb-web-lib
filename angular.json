@@ -120,6 +120,51 @@
           }
         }
       }
+    },
+    "lamb-web-lib": {
+      "root": "projects/lamb-web-lib",
+      "sourceRoot": "projects/lamb-web-lib/src",
+      "projectType": "library",
+      "prefix": "lamb",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lamb-web-lib/tsconfig.lib.json",
+            "project": "projects/lamb-web-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/lamb-web-lib/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lamb-web-lib/src/test.ts",
+            "tsConfig": "projects/lamb-web-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/lamb-web-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lamb-web-lib/tsconfig.lib.json",
+              "projects/lamb-web-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "lamb-web-lib-app"

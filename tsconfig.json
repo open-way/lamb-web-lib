@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "lamb-web-lib": [
+        "dist/lamb-web-lib"
+      ],
+      "lamb-web-lib/*": [
+        "dist/lamb-web-lib/*"
+      ]
+    }
   }
 }
