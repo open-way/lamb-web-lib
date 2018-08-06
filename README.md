@@ -1,27 +1,55 @@
-# LambWebLibApp
+# LambWebLib
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+LambWebLib. Es un proyecto angular de tipo Librería. que contiene una Suit de componentes reutilizables para el proyecto [Lamb Financial](https://lamb.upeu.edu.pe).
+## Demo
+[Demo](https://lamb.upeu.edu.pe)
+## Requisitos
+* Angular versión 6.0.0
+* Bootstrap Versión 4.0.0
 
-## Development server
+## Instalación
+Tu puedes instalar el paquete con `npm` con el siguiente comando.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```shell
+npm install lamb-web-lib
+```
+Luego agregar el módulo del componente que deseas utilizar en el `AppModule` o `xModule` de tu aplicación.
 
-## Code scaffolding
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ButtonIconModule, LambWebLibModule } from 'lamb-web-lib';
 
-## Build
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    LambWebLibModule,
+    ButtonIconModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+y ya podras utilizarlo en tu componente html.
+```html
+<lamb-lamb-web-lib></lamb-lamb-web-lib>
 
-## Running unit tests
+<lamb-button-icon></lamb-button-icon>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Colaboradores.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Autor
+* [Vitmar J. Aliaga Cruz](https://github.com/valiaga).
+## Licencia
+Este proyecto esta bajo la licencia MIT.
