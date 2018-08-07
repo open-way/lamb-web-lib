@@ -7,14 +7,49 @@ LambWebLib. Es un proyecto angular de tipo Librería. que contiene una Suit de c
 
 ## Requisitos
 * Angular versión 6.0.0
-* Bootstrap Versión 4.0.0
+* @nebular/theme Versión 2.0.0-rc.9
+* Bootstrap Versión 4.1.3
+* Font-awesome Versión 4.7.0
 
 ## Instalación
-Tu puedes instalar el paquete con `npm` con el siguiente comando.
+
+Debemos instalar primero los requisitos con `npm`.
+
+Primero instalaremos Nebular.
+
+```shell
+npm install --save @nebular/theme
+```
+Luego instalamos Bootstrap.
+
+```shell
+npm i -save bootstrap
+```
+
+Ahora instalamos Font-awesome.
+
+```shell
+npm i --save font-awesome
+```
+
+Finalmente instalamos el paquete con el siguiente comando.
 
 ```shell
 npm install lamb-web-lib
 ```
+
+## Configuración de los estilos.
+
+Modificamos nuestro archivo `angular.json` de nuestro proyecto. Debe quedar asi.
+
+```json
+"styles": [
+  "./node_modules/font-awesome/scss/font-awesome.scss",
+  "./node_modules/bootstrap/dist/css/bootstrap.css",
+  "./node_modules/@nebular/theme/styles/prebuilt/default.css", // or cosmic.css
+],
+```
+
 Luego agregar el módulo del componente que deseas utilizar en el `AppModule` o `xModule` de tu aplicación.
 
 ```typescript
@@ -25,6 +60,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonIconModule, LambWebLibModule } from 'lamb-web-lib';
 
+// Importamos el tema de Nebular
+import { NbThemeModule } from '@nebular/theme';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -32,6 +70,9 @@ import { ButtonIconModule, LambWebLibModule } from 'lamb-web-lib';
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    // Importamos el dema `default` en nuestra aplicacíón.
+     NbThemeModule.forRoot({ name: 'default' }), 
 
     LambWebLibModule,
     ButtonIconModule
@@ -50,10 +91,13 @@ y ya podras utilizarlo en tu componente html.
 
 ## Colaboradores.
 
+* 
+* 
 
-## Autor
+## Autores
 
 * [Vitmar J. Aliaga Cruz](https://github.com/valiaga).
+* [Guido L. Calsina Tipo](https://github.com/tiposaurio).
 
 ## Licencia
 

@@ -1,0 +1,33 @@
+// http://embed.plnkr.co/5D8fv5o5egpKpYz509O3/preview
+
+::ng-deep {
+    /* enable absolute positioning */
+    .inner-addon {
+        position: relative;
+    }
+
+    /* style glyph */
+    .inner-addon .fa {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+    }
+}
+
+.start-addon {
+    /* align glyph */
+    /deep/ .fa  { left:  0;}
+    
+    /* add padding  */
+    /deep/ input  { padding-left:  30px; }
+}
+
+.end-addon {
+    /* align glyph */
+    /deep/ .fa { right: 0;}
+
+    /* add padding  */
+    /deep/ input {
+        padding-right: 30px;
+    }
+}

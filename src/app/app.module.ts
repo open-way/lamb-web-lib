@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonIconModule, LambWebLibModule } from 'lamb-web-lib';
+import { LambInputIconModule, LambButtonIconModule, LambWebLibModule } from 'lamb-web-lib';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { ButtonIconModule, LambWebLibModule } from 'lamb-web-lib';
     AppRoutingModule,
 
     LambWebLibModule,
-    ButtonIconModule
+    LambButtonIconModule,
+    LambInputIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,13 @@
-import { InputIconModule } from './input-icon.module';
+import { LambInputIconModule } from './input-icon.module';
 
-describe('InputIconModule', () => {
-  let inputIconModule: InputIconModule;
+describe('LambInputIconModule', () => {
+  let lambInputIconModule: LambInputIconModule;
 
   beforeEach(() => {
-    inputIconModule = new InputIconModule();
+    lambInputIconModule = new LambInputIconModule();
   });
 
   it('should create an instance', () => {
-    expect(inputIconModule).toBeTruthy();
+    expect(lambInputIconModule).toBeTruthy();
   });
 });

@@ -1,0 +1,15 @@
+@import '~@nebular/theme/styles/theming';
+@include nb-install-component() {
+    .lamb-icon {
+        margin-right: 3px;
+    }
+    button {
+        background-color: nb-theme(color-secondary);
+    }
+    @media (max-width: 550px) {
+        .lamb-btn-block {
+            display: block;
+            width: 100%;
+        }
+    }
+}

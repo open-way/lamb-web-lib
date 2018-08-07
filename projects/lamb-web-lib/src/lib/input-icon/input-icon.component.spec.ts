@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputIconComponent } from './input-icon.component';
+import { LambInputIconComponent } from './input-icon.component';
 
-describe('InputIconComponent', () => {
-  let component: InputIconComponent;
-  let fixture: ComponentFixture<InputIconComponent>;
+describe('LambInputIconComponent', () => {
+  let component: LambInputIconComponent;
+  let fixture: ComponentFixture<LambInputIconComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputIconComponent ]
+      declarations: [ LambInputIconComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InputIconComponent);
+    fixture = TestBed.createComponent(LambInputIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

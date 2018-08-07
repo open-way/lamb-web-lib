@@ -1,13 +1,13 @@
-import { ButtonIconModule } from './button-icon.module';
+import { LambButtonIconModule } from './button-icon.module';
 
 describe('ButtonIconModule', () => {
-  let buttonIconModule: ButtonIconModule;
+  let lambButtonIconModule: LambButtonIconModule;
 
   beforeEach(() => {
-    buttonIconModule = new ButtonIconModule();
+    lambButtonIconModule = new LambButtonIconModule();
   });
 
   it('should create an instance', () => {
-    expect(buttonIconModule).toBeTruthy();
+    expect(lambButtonIconModule).toBeTruthy();
   });
 });
