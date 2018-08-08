@@ -3,6 +3,9 @@
   "dest": "../../dist/lamb-web-lib",
   "deleteDestPath": false,
   "lib": {
-    "entryFile": "src/public_api.ts"
+    "entryFile": "src/public_api.ts",
+    "styleIncludePaths": [
+      "src/lib/styles/prebuild/lamb-style.scss"
+    ]
   }
 }

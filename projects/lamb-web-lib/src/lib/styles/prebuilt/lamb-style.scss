@@ -1,0 +1,8 @@
+@import '../globals';
+
+@mixin lamb-install {
+    @include lamb-theme-global();
+    // {
+        // @content;
+    // }
+}

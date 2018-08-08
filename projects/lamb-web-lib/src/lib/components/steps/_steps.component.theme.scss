@@ -1,0 +1,23 @@
+@mixin lamb-steps() {
+    .lamb-liner {
+        background: nb-theme(scrollbar-fg);
+    }
+
+    .nav-link {
+        .lamb-round-text {
+            color: nb-theme(color-fg-text);
+        }
+
+        &.active span.lamb-round-tabs {
+            color: nb-theme(color-bg);
+        }
+    }
+    .lamb-nav-tabs {
+        background-color: nb-theme(layout-bg);
+        border-radius: nb-theme(radius);
+    }
+
+    span.lamb-round-tabs {
+        background: nb-theme(color-bg);
+    }
+}

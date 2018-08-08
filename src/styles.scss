@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'themes';
+
+// framework component styles which will use your new theme.
+@import '~@nebular/theme/styles/globals';
+
+// Framework lamb
+@import './dist/lamb-web-lib/lib/styles/globals';
+
+// install the framework.
+@include nb-install() {
+    @include nb-theme-global();
+    @include lamb-theme-global();
+};

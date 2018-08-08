@@ -10,7 +10,7 @@
  * @example
  *
  * ```
- * <lamb-button-icon icon="fa fa-home" title="Crear un nuevo cliente" onlyIcon="true"></lamb-button-icon>
+ * <lamb-button-icon icon="fa fa-home" title="Crear un nuevo cliente" colorClass="btn-primary" onlyIcon="true"></lamb-button-icon>
  * ```
  */
 

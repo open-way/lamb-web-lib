@@ -1,0 +1,15 @@
+.lamb-icon {
+    margin-right: 3px;
+}
+@media (max-width: 550px) {
+    .lamb-btn-block {
+        display: block;
+        width: 100%;
+    }
+}
+:host {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}

@@ -1,0 +1,15 @@
+@mixin lamb-nebular-input-group-theme() {
+    .input-group-sm > .form-control {
+        font-size: nb-theme(form-control-font-size-sm);
+        padding: nb-theme(form-control-padding-sm);
+        @include install-placeholder(nb-theme(form-control-placeholder-color),
+            nb-theme(form-control-font-size-sm));
+    }
+    
+    .input-group-lg > .form-control {
+        font-size: nb-theme(form-control-font-size-lg);
+        padding: nb-theme(form-control-padding-lg);
+        @include install-placeholder(nb-theme(form-control-placeholder-color),
+            nb-theme(form-control-font-size-lg));
+    }
+}

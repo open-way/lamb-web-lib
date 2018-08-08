@@ -1,0 +1,22 @@
+@mixin install-placeholder($color, $font-size) {
+    $placeholder-selectors: (
+    //   '::-webkit-input-placeholder'
+    //   '::-moz-placeholder'
+    //   ':-moz-placeholder'
+    //   ':-ms-input-placeholder'
+    );
+  
+    &::placeholder {
+      @include placeholder($color, $font-size);
+    }
+  
+    @each $selector in $placeholder-selectors {
+      &#{$selector} {
+        @include placeholder($color, $font-size);
+      }
+  
+      &:focus#{$selector} {
+        @include placeholder-focus();
+      }
+    }
+  }

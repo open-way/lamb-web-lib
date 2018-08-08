@@ -6,5 +6,7 @@ export * from './lib/lamb-web-lib.service';
 export * from './lib/lamb-web-lib.component';
 export * from './lib/lamb-web-lib.module';
 
-export * from './lib/button-icon';
-export * from './lib/input-icon';
+/** Components */
+export * from './lib/components';
+
+/** Styles */

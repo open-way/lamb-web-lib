@@ -1,0 +1,55 @@
+<!-- <ul class="nav justify-content-center" id="myTab" role="tablist"> -->
+<div class="row">
+    <div [class]="'col-md-' + (orientation === 'horizontal' ? '12' : '2' ) ">
+        <!-- <div class="card">
+                    <div class="card-body"> -->
+        <ul *ngIf="orientation === 'horizontal' && tabGroupTitle?.templateRef" class="nav flex-column lamb-nav-group-title">
+            <li class="nav-item-group-title">
+                <ng-template [ngTemplateOutlet]="tabGroupTitle?.templateRef">
+                </ng-template>
+            </li>
+        </ul>
+        <ul [class]="'nav nav-' + type + (orientation === 'horizontal' ? ' ' + justifyClass + ' lamb-nav-horizontal' : ' flex-column lamb-ul-nav-vertical' )"
+            id="myTab" role="tablist">
+            <li class="nav-item-group-title" *ngIf="orientation === 'vertical' && tabGroupTitle?.templateRef">
+                <ng-template [ngTemplateOutlet]="tabGroupTitle?.templateRef">
+                </ng-template>
+            </li>
+            <!-- <li> -->
+            <!-- <ul>hola</ul> -->
+            <!-- </li> -->
+            <li *ngFor="let tab of tabs" class="nav-item">
+                <a [id]="tab.id" [class]="'nav-link' + (orientation === 'horizontal'? ' lamb-nav-horizontal': ' lamb-nav-vertical' )" [class.active]="tab.id === activeId"
+                    [class.disabled]="tab.disabled" (click)="!!onSelect(tab.id)" role="tab" [attr.tabindex]="(tab.disabled ? '-1': undefined)"
+                    [attr.aria-controls]="(!destroyOnHide || tab.id === activeId ? tab.id + '-panel': null)" [attr.aria-expanded]="tab.id === activeId"
+                    [attr.aria-disabled]="tab.disabled">
+                    <!-- data-toggle="tab"
+                            aria-selected="true" -->
+                    <ng-template [ngIf]="tab.icon">
+                        <span>
+                            <i class="{{ tab.icon }} lamb-icon"></i>
+                        </span>
+                    </ng-template>
+                    {{ tab.title }}
+                    <ng-template [ngTemplateOutlet]="tab.titleTemplate?.templateRef"></ng-template>
+                </a>
+            </li>
+            <!-- <ng-content select="lamb-tab-head"></ng-content> -->
+        </ul>
+        <!-- </div>
+                </div> -->
+    </div>
+    <div [class]="'col-md-' + (orientation === 'horizontal' ? '12' : '10' ) ">
+
+        <div class="tab-content" id="myTabContent">
+            <!-- <ng-content select="lamb-tab-body"></ng-content> -->
+            <ng-template ngFor let-tab [ngForOf]="tabs">
+                <!-- class="tab-pane fade {{ tab.id === activeId ? 'active': null }}" -->
+                <div class="tab-pane {{ tab.id === activeId ? 'active': null }}" *ngIf="!destroyOnHide || tab.id === activeId" role="tabpanel"
+                    [attr.aria-labelledby]="tab.id" id="{{ tab.id }}-panel" [attr.aria-expanded]="tab.id === activeId">
+                    <ng-template [ngTemplateOutlet]="tab.contentTemplate?.templateRef"></ng-template>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

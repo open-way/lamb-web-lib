@@ -1,0 +1,11 @@
+@mixin lamb-confirm-dialog() {
+    .btn {
+        &.btn-primary {
+            color: nb-theme(layout-bg);
+            &:active,
+            &:hover {
+                color: nb-theme(layout-bg);
+            }
+        }
+    }
+}

@@ -3,11 +3,12 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'lamb-button-icon',
   templateUrl: './button-icon.component.html',
-  styleUrls: ['./button-icon.component.scss']
+  styleUrls: ['button-icon.component.scss']
 })
 export class LambButtonIconComponent implements OnInit {
 
-  @Input() class: string;
+  @Input() colorClass: string;
+  // @Input() class: string; // DEPRECATED
   @Input() label: string;
   @Input() isDisabled: boolean;
   @Input() onlyIcon: boolean;
@@ -15,7 +16,7 @@ export class LambButtonIconComponent implements OnInit {
   @Input() title: string;
 
   constructor() {
-    this.class = 'btn-light';
+    this.colorClass = 'btn-light';
     this.icon = 'fa fa-plus-circle';
     this.label = 'New';
   }

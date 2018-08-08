@@ -3,19 +3,61 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LambInputIconModule, LambButtonIconModule, LambWebLibModule } from 'lamb-web-lib';
+
+import {
+  LambInputIconModule,
+  LambButtonIconModule, LambWebLibModule,
+  LambConfirmDialogModule,
+  LambModalModule,
+} from 'lamb-web-lib';
+
+import {
+  NbThemeModule, NbLayoutModule,
+  NbCardModule, NbSearchModule, NbSidebarModule, NbMenuModule,
+} from '@nebular/theme';
+import { MenuSidebarComponent } from './menu-sidebar/menu-sidebar.component';
+import {
+  InputIconComponent, ButtonIconComponent,
+  ConfirmDialogComponent, ModalComponent,
+  StepsComponent, TabsComponent,
+} from './components';
+
+export const NEBULAR_MODULES: any[] = [
+  NbLayoutModule,
+  NbCardModule,
+  NbSearchModule,
+  NbMenuModule.forRoot(),
+  NbThemeModule.forRoot({ name: 'default' }),
+  NbSidebarModule.forRoot(),
+];
+
+export const COMPONENTS: any[] = [
+  InputIconComponent, ButtonIconComponent,
+  ConfirmDialogComponent, ModalComponent,
+  StepsComponent, TabsComponent,
+];
+
+export const LAMB_MODULES: any[] = [
+  LambWebLibModule,
+  LambButtonIconModule,
+  LambInputIconModule,
+  LambConfirmDialogModule,
+
+  LambModalModule,
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuSidebarComponent,
+    ...COMPONENTS,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
-    LambWebLibModule,
-    LambButtonIconModule,
-    LambInputIconModule
+    ...LAMB_MODULES,
+    ...NEBULAR_MODULES,
   ],
   providers: [],
   bootstrap: [AppComponent]

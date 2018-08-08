@@ -1,0 +1,37 @@
+@mixin lamb-tabs() {
+    ul {
+      
+        &.lamb-ul-nav-vertical {
+            border-right: 1px solid nb-theme(btn-group-separator);
+        }
+        &.lamb-nav-horizontal {
+            border-bottom: 1px solid nb-theme(btn-group-separator);
+        }
+    }
+
+    .nav-item-group-title {
+        color:  nb-theme(color-white);
+        background-color: nb-theme(color-secondary);
+    }
+
+    .nav-item {
+        .nav-link {
+            &:not(.disabled) {
+                &.active {
+                    border-color: nb-theme(color-primary);
+                    background-color: nb-theme(lamb-menu-hover);
+                    &:focus,
+                    &:hover {
+                        background-color: nb-theme(lamb-menu-hover);
+                        border-color: nb-theme(color-primary);
+                    }
+                }
+                &:focus,
+                &:hover {
+                    background-color: nb-theme(lamb-menu-hover);
+                    border-color: nb-theme(color-fg);
+                }
+            }
+        }
+    }
+}

@@ -89,6 +89,39 @@ y ya podras utilizarlo en tu componente html.
 <lamb-button-icon></lamb-button-icon>
 ```
 
+Pero aún falta configurar los estilos de los componentes deberas tener tu archivo `styles.scss` carpeta `src`
+y tener este código.
+```scss
+/* You can add global styles to this file, and also import other style files */
+@import 'themes';
+
+// framework component styles which will use your new theme
+@import '~@nebular/theme/styles/globals';
+
+// Framework lamb
+@import '~lamb-web-lib/lib/styles/globals';
+
+// install the framework
+@include nb-install() {
+    @include nb-theme-global();
+    @include lamb-theme-global();
+};
+```
+Ademas deberas tener otro archivo `themes.scss` a la misma altura y tenerlo asi:
+
+```scss
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes/default';
+
+// Aqui podrás personalizar tus estilos. Gracias el framework de Nebular.
+$nb-themes: nb-register-theme((
+  separator: #ebeef2,
+  color-primary: #7f264a,
+//   header-bg: #611F3A,
+  form-control-border-width: 1px,
+), default, default);
+```
+Si deseas saber mas de como personalizar tus temas. ingresa a [temas de Nebular](https://akveo.github.io/nebular/docs/guides/enable-theme-system#basic-setup)
 ## Colaboradores.
 
 * 

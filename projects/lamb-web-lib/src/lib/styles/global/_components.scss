@@ -1,0 +1,16 @@
+@import '../../components/button-icon/button-icon.component.theme';
+@import '../../components/confirm-dialog/confirm-dialog.component.theme';
+@import '../../components/input-icon/input-icon.component.theme';
+@import '../../components/modal/modal.component.theme';
+@import '../../components/steps/steps.component.theme';
+@import '../../components/tabs/tabs.component.theme';
+
+@mixin lamb-theme-components() {
+
+    @include lamb-button-icon();
+    @include lamb-confirm-dialog();
+    @include lamb-input-icon();
+    @include lamb-modal();
+    @include lamb-steps();
+    @include lamb-tabs();
+}

@@ -1,0 +1,52 @@
+ul {
+    &.nav {
+        margin-bottom: 0.8rem;
+        padding-left: 0;
+    }
+    &.lamb-ul-nav-vertical {
+        border-bottom: none;
+    }
+}
+.nav-item-group-title {
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+}
+.lamb-nav-group-title {
+    margin-bottom: 0 !important;
+    text-align: center;
+}
+.nav-item {
+    text-transform: uppercase; // color: rgba(0,0,0,.54);
+    font-weight: 400;
+    .nav-link {
+        cursor: pointer;
+        font-size: 0.7rem;
+        &.lamb-nav-vertical {
+            border-right: 0.214rem solid transparent;
+        }
+        &.lamb-nav-horizontal {
+            border-bottom: 0.214rem solid transparent;
+        }
+        &:not(.disabled) {
+            &.active {
+                font-weight: 500;
+                &:focus,
+                &:hover {
+                    font-weight: 500; // color: rgba(0,0,0,.87);
+                }
+            }
+        }
+        ::ng-deep .lamb-icon {
+            font-size: medium;
+            margin-right: 6px;
+        }
+        &.disabled {
+            cursor: not-allowed;
+            &:focus,
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+}

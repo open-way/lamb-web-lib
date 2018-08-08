@@ -5,6 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-lamb-web-lib": "ng build --prod lamb-web-lib && npm run build-lamb-web-lib-styles && npm run build-lamb-web-lib-assets",
+    "build-lamb-web-lib-styles": "cpx \"./projects/lamb-web-lib/src/lib/**/_*.scss\" \"./dist/lamb-web-lib/lib\"",
+    "build-lamb-web-lib-styles-test": "cpx \"./projects/lamb-web-lib/src/lib/styles/**/*\" \"./dist/lamb-web-lib/lib/styles\" && scss-bundle -e ./projects/lamb-web-lib/src/lib/styles/prebuilt/lamb-style.scss -d ./dist/lamb-web-lib/lib/styles/prebuilt/lamb-style.scss",
+    "build-lamb-web-lib-assets": "cpx \"./src/assets/**/*\" \"./dist/lamb-web-lib/assets\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,8 +27,10 @@
     "@nebular/theme": "^2.0.0-rc.9",
     "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
+    "cpx": "^1.5.0",
     "font-awesome": "^4.7.0",
     "rxjs": "^6.0.0",
+    "scss-bundle": "^2.3.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

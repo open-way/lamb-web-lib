@@ -1,0 +1,81 @@
+<!-- <ul class="nav justify-content-center" id="myStep" role="steplist"> -->
+<ul [class]="'nav lamb-nav-tabs nav-' + type + (orientation == 'horizontal'? ' ' + justifyClass : ' flex-column' )" id="myStep"
+    role="steplist">
+
+    <!-- <ng-template ngFor let-step [ngForOf]="steps" *ngFor="let step of steps"> -->
+    <ng-template ngFor let-step [ngForOf]="steps">
+        <li class="nav-item">
+            <a [id]="step.id" class="nav-link" [class.active]="step.id === activeId" [class.disabled]="step.disabled || !step.isValidStep"
+                (click)="!!onSelect(step.id)" role="step" [attr.stepindex]="(step.disabled || !step.isValidStep ? '-1': undefined)"
+                [attr.aria-controls]="(!destroyOnHide || step.id === activeId ? step.id + '-panel': null)" [attr.aria-expanded]="step.id === activeId"
+                [attr.aria-disabled]="step.disabled || !step.isValidStep">
+                <!-- data-toggle="step"
+                aria-selected="true" -->
+                <ng-template [ngIf]="step.icon">
+                    <span class="lamb-round-tabs" [title]="step.title">
+                        <i class="{{ step.icon }} lamb-icon"></i>
+                    </span>
+                </ng-template>
+                <br>
+                <span class="lamb-round-text">
+                    {{ step.title }}
+                </span>
+                <ng-template [ngTemplateOutlet]="step.titleTemplate?.templateRef"></ng-template>
+            </a>
+        </li>
+        <li class="nav-line" *ngIf="hideLineRight(step.id)">
+            <div class="lamb-liner"></div>
+        </li>
+    </ng-template>
+
+    <!-- <ng-content select="lamb-step-head"></ng-content> -->
+</ul>
+<div class="tab-content lamb-content" id="myStepContent">
+    <!-- <ng-content select="lamb-step-body"></ng-content> -->
+    <ng-template ngFor let-step [ngForOf]="steps">
+        <!-- class="step-pane fade {{ step.id === activeId ? 'active': null }}" -->
+        <!-- 
+        <div [@slideOfRight]="((step.id === activeId) && (status === 'next')) ? 'next': 'back'" class="tab-pane {{ step.id === activeId ? 'active': 'active' }}"
+            *ngIf="!destroyOnHide || step.id === activeId" role="steppanel" [attr.aria-labelledby]="step.id" id="{{ step.id }}-panel"
+            [attr.aria-expanded]="step.id === activeId"> -->
+
+        <div class="tab-pane {{ step.id === activeId ? 'active': null }}" *ngIf="!destroyOnHide || step.id === activeId" role="steppanel"
+            [attr.aria-labelledby]="step.id" id="{{ step.id }}-panel" [attr.aria-expanded]="step.id === activeId">
+            <div class="row">
+                <div class="col-md-12">
+                    <ng-template [ngTemplateOutlet]="step.contentTemplate?.templateRef"></ng-template>
+                </div>
+            </div>
+            <div class="row lamb-button-manage">
+                <div class="offset-md-4 col-md-4">
+                    <div class="row">
+                        <div class="col-md-6" *ngIf="hidePrevious">
+                            <div class="form-group text-center space-20">
+                                <button class="btn btn-sm btn-block btn-outline-rounded btn-default" (click)="back()">
+                                    <span style="margin-right:10px;" class="fa fa-arrow-left"></span>
+                                    {{ iConfigNames.buttonBack }}
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6" *ngIf="hideNext">
+                            <div class="form-group text-center space-20">
+                                <button class="btn btn-sm btn-block btn-outline-rounded btn-info" [disabled]="!step.isValidStep" (click)="next()">
+                                    {{ iConfigNames.buttonNext }}
+                                    <span style="margin-left:10px;" class="fa fa-arrow-right"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6" *ngIf="hidePrevious && !hideNext">
+                            <div class="form-group text-center space-20">
+                                <button class="btn btn-sm btn-block btn-outline-rounded btn-info" [disabled]="!step.isValidStep" (click)="complete()">
+                                    {{ iConfigNames.buttonFinish }}
+                                    <span style="margin-left:10px;" class="fa fa-check"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,12 @@
+@mixin lamb-nebular-forms-theme() {
+    .input-group-addon,
+    .form-control {
+        &:disabled {
+            border-color: nb-theme(form-control-border-color);
+            @include install-placeholder(rgba(nb-theme(form-control-placeholder-color), 0.5),
+                nb-theme(form-control-placeholder-font-size));
+        }
+        @include install-placeholder(nb-theme(form-control-placeholder-color),
+            nb-theme(form-control-placeholder-font-size));
+    }
+}
