@@ -8,7 +8,7 @@ import {
   LambInputIconModule,
   LambButtonIconModule, LambWebLibModule,
   LambConfirmDialogModule,
-  LambModalModule,
+  LambModalModule, LambMenuModule,
 } from 'lamb-web-lib';
 
 import {
@@ -21,6 +21,7 @@ import {
   ConfirmDialogComponent, ModalComponent,
   StepsComponent, TabsComponent,
 } from './components';
+import { MenuComponent } from './components/menu/menu.component';
 
 export const NEBULAR_MODULES: any[] = [
   NbLayoutModule,
@@ -34,7 +35,7 @@ export const NEBULAR_MODULES: any[] = [
 export const COMPONENTS: any[] = [
   InputIconComponent, ButtonIconComponent,
   ConfirmDialogComponent, ModalComponent,
-  StepsComponent, TabsComponent,
+  MenuComponent, StepsComponent, TabsComponent,
 ];
 
 export const LAMB_MODULES: any[] = [
@@ -42,6 +43,7 @@ export const LAMB_MODULES: any[] = [
   LambButtonIconModule,
   LambInputIconModule,
   LambConfirmDialogModule,
+  LambMenuModule,
 
   LambModalModule,
 ];

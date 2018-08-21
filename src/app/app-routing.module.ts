@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {
   ButtonIconComponent, InputIconComponent,
   ConfirmDialogComponent, ModalComponent,
-  StepsComponent, TabsComponent,
+  StepsComponent, TabsComponent, MenuComponent,
 } from './components';
 
 const routes: Routes = [
@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'modal',
     component: ModalComponent,
+  },
+  {
+    path: 'menu',
+    component: MenuComponent,
   },
   {
     path: 'steps',

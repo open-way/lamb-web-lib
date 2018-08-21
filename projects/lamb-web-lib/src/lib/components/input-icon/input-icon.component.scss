@@ -9,8 +9,11 @@
     /* style glyph */
     .inner-addon .fa {
         position: absolute;
-        padding: 10px;
+        top: 25%;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
         pointer-events: none;
+        font-size: initial,
     }
 }
 

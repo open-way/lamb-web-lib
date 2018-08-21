@@ -1,18 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~@nebular/theme/styles/theming';
-@import '~@nebular/theme/styles/themes/default';
+@import './dist/lamb-web-lib/lib/styles/themes/default';
 
 
 $nb-themes: nb-register-theme((
-//   separator: #ebeef2,
-
-  // color-primary: #7f264a,
   shadow: 0 1px 2px 0 #611F3A,
   layout-bg: #fbf9f3,
-  // header-bg: #611F3A,
   form-control-selected-border-color: #611F3A,
-  form-control-border-width: 1px,
-  // form-control-focus-bg: separator,
-//   color-fg: #222222,
+
+  // menu-submenu-item-border-width: 0rem,
+  // menu-submenu-item-container-padding: 0 0 0 0.5rem,
+
+  color-fg-highlight: #611F3A,
 ), default, default);

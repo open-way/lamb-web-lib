@@ -1,6 +1,6 @@
 {
   "name": "lamb-web-lib",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "descripcion": "Librería de componentes personalizados para el proyecto Lamb Financial de la Universidad Peruana Unión.",
   "author": "Vitmar J. Aliaga Cruz.",
   "license": "MIT",

@@ -1,0 +1,19 @@
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes/default';
+
+$nb-themes: nb-register-theme((
+  form-control-border-width: 1px,
+
+  menu-icon-font-size: 1.8rem, // Normal 1.8rem
+  menu-icon-margin: 0 0.6rem 0,
+  menu-submenu-item-container-padding: 0,
+  menu-submenu-item-border-width: 0,
+  menu-font-size: 0.75rem,
+  menu-item-padding:  0.675rem 1rem 0.675rem 0.75rem,
+  menu-submenu-item-padding: 0.5rem 1.3rem,
+
+  menu-submenu-hover-bg: color-fg-highlight,
+  menu-submenu-active-bg: color-fg-highlight,
+  menu-active-bg: color-fg-highlight,
+
+), default, default);

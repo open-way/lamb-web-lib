@@ -1,0 +1,29 @@
+/** 
+ * El tamaño de los items tiene que afectar a ambos, aqui no hay coma,
+ * si queremos que este dentro del tema tiene que haber coma ":host, ::ng-deep".
+ */
+:host ::ng-deep {
+  display: block;
+  margin: 0 -1.25rem -1.25rem;
+  .lamb-menu-items,
+  .lamb-menu-item > .lamb-menu-items {
+    list-style-type: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in;
+  }
+
+  .lamb-menu-item a {
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    align-items: center;
+
+    .lamb-menu-title {
+      flex: 1;
+      // display: none;
+    }
+    .ion {
+      // display: none;
+    }
+  }
+}

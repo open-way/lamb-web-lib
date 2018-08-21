@@ -4,3 +4,4 @@ export * from './input-icon/input-icon.component';
 export * from './modal/modal.component';
 export * from './steps/steps.component';
 export * from './tabs/tabs.component';
+export * from './menu/menu.component';

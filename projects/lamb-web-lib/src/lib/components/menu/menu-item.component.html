@@ -1,0 +1,36 @@
+<span *ngIf="lambMenuItem.group && !lambMenuItem.hidden">
+    <i class="lamb-menu-icon {{ lambMenuItem.icon }}" *ngIf="lambMenuItem.icon"></i>
+    {{ lambMenuItem.title }} 1
+</span>
+<a *ngIf="lambMenuItem.link && !lambMenuItem.url
+  && !(lambMenuItem.children && lambMenuItem.children.length) && !lambMenuItem.group && !lambMenuItem.hidden" [routerLink]="lambMenuItem.link"
+    [fragment]="lambMenuItem.fragment" [attr.target]="lambMenuItem.target" [attr.title]="lambMenuItem.title" [class.active]="lambMenuItem.selected"
+    (mouseenter)="onHoverItem(lambMenuItem)">
+    <i class="lamb-menu-icon {{ lambMenuItem.icon }}" *ngIf="lambMenuItem.icon"></i>
+    <span class="lamb-menu-title">{{ lambMenuItem.title }}</span>
+</a>
+<a *ngIf="lambMenuItem.url && !(lambMenuItem.children && lambMenuItem.children.length)
+  && !lambMenuItem.link && !lambMenuItem.group && !lambMenuItem.hidden" [attr.href]="lambMenuItem.url" [attr.target]="lambMenuItem.target"
+    [attr.title]="lambMenuItem.title" [class.active]="lambMenuItem.selected" (mouseenter)="onHoverItem(lambMenuItem)" (click)="onSelectItem(lambMenuItem)">
+    <i class="lamb-menu-icon {{ lambMenuItem.icon }}" *ngIf="lambMenuItem.icon"></i>
+    <span class="lamb-menu-title">{{ lambMenuItem.title }}</span>
+</a>
+<a *ngIf="!(lambMenuItem.children && lambMenuItem.children.length) && !lambMenuItem.link
+  && !lambMenuItem.url && !lambMenuItem.group && !lambMenuItem.hidden" [attr.target]="lambMenuItem.target" [attr.title]="lambMenuItem.title"
+    [class.active]="lambMenuItem.selected" (mouseenter)="onHoverItem(lambMenuItem)" (click)="$event.preventDefault(); onItemClick(lambMenuItem);">
+    <i class="lamb-menu-icon {{ lambMenuItem.icon }}" *ngIf="lambMenuItem.icon"></i>
+    <span class="lamb-menu-title">{{ lambMenuItem.title }}</span>
+</a>
+<a *ngIf="(lambMenuItem.children && lambMenuItem.children.length) && !lambMenuItem.hidden" (click)="$event.preventDefault(); onToggleSubMenu(lambMenuItem);"
+    [attr.target]="lambMenuItem.target" [attr.title]="lambMenuItem.title" [class.active]="lambMenuItem.selected" (mouseenter)="onHoverItem(lambMenuItem)"
+    href="#">
+    <i class="lamb-menu-icon {{ lambMenuItem.icon }}" *ngIf="lambMenuItem.icon"></i>
+    <span class="lamb-menu-title">{{ lambMenuItem.title }}</span>
+    <!-- <i class="ion chevron" [class.ion-chevron-up]="!lambMenuItem.expanded" [class.ion-chevron-down]="lambMenuItem.expanded"></i> -->
+    <i class="fa chevron" [class.fa-chevron-up]="!lambMenuItem.expanded" [class.fa-chevron-down]="lambMenuItem.expanded"></i>
+</a>
+<ul *ngIf="(lambMenuItem.children && lambMenuItem.children.length) && !lambMenuItem.hidden" [class.collapsed]="!(lambMenuItem.children && lambMenuItem.expanded)"
+    [class.expanded]="lambMenuItem.expanded" class="lamb-menu-items" [style.max-height.px]="maxHeight">
+    <li lambMenuItem *ngFor="let item of lambMenuItem.children" [lambMenuItemm]="item" [class.lamb-menu-group]="item.group" (hoverItem)="onHoverItem($event)"
+        (toggleSubMenu)="onToggleSubMenu($event)" (selectItem)="onSelectItem($event)" (itemClick)="onItemClick($event)" class="lamb-menu-item"></li>
+</ul>

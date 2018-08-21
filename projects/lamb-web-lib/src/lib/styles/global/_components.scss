@@ -4,6 +4,7 @@
 @import '../../components/modal/modal.component.theme';
 @import '../../components/steps/steps.component.theme';
 @import '../../components/tabs/tabs.component.theme';
+@import '../../components/menu/menu.component.theme';
 
 @mixin lamb-theme-components() {
 
@@ -13,4 +14,5 @@
     @include lamb-modal();
     @include lamb-steps();
     @include lamb-tabs();
+    @include lamb-menu();
 }

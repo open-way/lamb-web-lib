@@ -35,6 +35,10 @@ export class MenuSidebarComponent implements OnInit {
         link: ['modal'],
       },
       {
+        title: 'Menu',
+        link: ['menu'],
+      },
+      {
         title: 'Steps',
         link: ['steps'],
       },
