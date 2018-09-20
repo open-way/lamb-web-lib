@@ -1,0 +1,11 @@
+@mixin lamb-fieldset() {
+    .lamb-fieldset-border {
+        border: 1px solid nb-theme(color-bg-active);
+        -webkit-box-shadow: 0 nb-theme(color-bg-active);
+        box-shadow: 5px 5px 0 nb-theme(color-bg-active);
+    }
+    .lamb-legend-border {
+        font-size: nb-theme(header-font-size);
+        font-weight: nb-theme(font-weight-bolder);
+    }
+}

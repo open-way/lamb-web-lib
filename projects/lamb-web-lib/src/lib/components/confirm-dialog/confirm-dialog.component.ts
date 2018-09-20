@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LambActiveModal } from '../modal';
+import { LambActiveModal } from '../modal/modal.module';
 
 @Component({
   selector: 'lamb-confirm-dialog',

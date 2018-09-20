@@ -1,0 +1,5 @@
+@mixin lamb-show-error() {
+    .text-error {
+        color: nb-theme(color-danger);
+    }
+}

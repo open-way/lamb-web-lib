@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LambMenuService } from 'lamb-web-lib';
 
 @Component({
   selector: 'app-menu',
@@ -34,7 +35,7 @@ export class MenuComponent implements OnInit {
       link: ['orders'],
     },
   ];
-  constructor() { }
+  constructor(private lambMenuService: LambMenuService) { }
 
   ngOnInit() {
   }

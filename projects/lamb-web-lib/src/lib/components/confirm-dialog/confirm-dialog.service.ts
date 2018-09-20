@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LambModalService } from '../modal';
+import { LambModalService } from '../modal/modal.module';
 import { LambConfirmDialogComponent } from './confirm-dialog.component';
 import { message } from './messages';
 
@@ -18,7 +18,7 @@ export class LambConfirmDialogService {
 
   /**
    * Confirm
-   * @param options opctional JSON Obtions
+   * @param options optional JSON Options
    * @param action X = XXX; D = Delete; U = Update; S = Save
    */
   public confirm(options: Options = {}, action?: 'D' | 'U' | 'S'): Promise<boolean> {

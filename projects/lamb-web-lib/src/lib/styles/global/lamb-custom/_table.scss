@@ -1,0 +1,17 @@
+@mixin lamb-table-theme() {
+    .table thead {
+        border-bottom: 3px solid nb-theme(color-primary);
+        color: nb-theme(color-fg-text);
+    }
+
+    .table-striped tbody tr {
+        &:nth-of-type(odd) {
+            background-color:transparent; // Choose your own color here
+        }
+        &:nth-child(odd) {
+            td, th {
+                background-color: nb-theme(lamb-menu-hover); // Choose your own color here
+            }
+        }
+    }
+}

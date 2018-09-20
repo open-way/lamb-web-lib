@@ -9,6 +9,8 @@ import {
   LambButtonIconModule, LambWebLibModule,
   LambConfirmDialogModule,
   LambModalModule, LambMenuModule,
+  LambTitleModule, LambFieldsetModule,
+  LambButtonBackModule, LambDividerModule, LambTabsModule,
 } from 'lamb-web-lib';
 
 import {
@@ -19,7 +21,8 @@ import { MenuSidebarComponent } from './menu-sidebar/menu-sidebar.component';
 import {
   InputIconComponent, ButtonIconComponent,
   ConfirmDialogComponent, ModalComponent,
-  StepsComponent, TabsComponent,
+  StepsComponent, TabsComponent, TitleComponent, FieldsetComponent,
+  DividerComponent,
 } from './components';
 import { MenuComponent } from './components/menu/menu.component';
 
@@ -36,6 +39,7 @@ export const COMPONENTS: any[] = [
   InputIconComponent, ButtonIconComponent,
   ConfirmDialogComponent, ModalComponent,
   MenuComponent, StepsComponent, TabsComponent,
+  TitleComponent, FieldsetComponent, DividerComponent,
 ];
 
 export const LAMB_MODULES: any[] = [
@@ -46,6 +50,10 @@ export const LAMB_MODULES: any[] = [
   LambMenuModule,
 
   LambModalModule,
+  LambTitleModule.forRoot({ appName: 'Cambié de nombre' }),
+  LambFieldsetModule,
+  LambDividerModule,
+  LambTabsModule,
 ];
 
 @NgModule({

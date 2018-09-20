@@ -2,8 +2,16 @@
 
 @import 'nebular/forms';
 @import 'nebular/input-group';
+@import 'lamb-custom/table';
+@import 'lamb-custom/form-label-required';
+@import 'lamb-custom/pagination';
+@import 'lamb-custom/autocomplete';
 
 @mixin lamb-theme-overrides() {
     @include lamb-nebular-forms-theme();
     @include lamb-nebular-input-group-theme();
+    @include lamb-table-theme();
+    @include lamb-form-label-required-theme();
+    @include lamb-pagination-theme();
+    @include lamb-autocomplete-theme();
 }

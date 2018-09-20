@@ -4,7 +4,10 @@ import {
   ButtonIconComponent, InputIconComponent,
   ConfirmDialogComponent, ModalComponent,
   StepsComponent, TabsComponent, MenuComponent,
+  TitleComponent,
+  DividerComponent,
 } from './components';
+import { FieldsetComponent } from './components/fieldset/fieldset.component';
 
 const routes: Routes = [
   {
@@ -32,8 +35,20 @@ const routes: Routes = [
     component: StepsComponent,
   },
   {
+    path: 'title',
+    component: TitleComponent,
+  },
+  {
     path: 'tabs',
     component: TabsComponent,
+  },
+  {
+    path: 'fieldset',
+    component: FieldsetComponent,
+  },
+  {
+    path: 'divider',
+    component: DividerComponent,
   },
 ];
 

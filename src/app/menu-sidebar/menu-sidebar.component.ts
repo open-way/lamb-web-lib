@@ -47,6 +47,18 @@ export class MenuSidebarComponent implements OnInit {
         link: ['tabs'],
       },
       {
+        title: 'Title',
+        link: ['title'],
+      },
+      {
+        title: 'Fieldset',
+        link: ['fieldset'],
+      },
+      {
+        title: 'Divider',
+        link: ['divider'],
+      },
+      {
         title: 'Etc',
         link: [],
       },

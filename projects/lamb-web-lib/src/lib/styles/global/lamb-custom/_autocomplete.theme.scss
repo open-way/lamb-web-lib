@@ -1,0 +1,10 @@
+@mixin lamb-autocomplete-theme() {
+    .dropdown-menu {
+        font-size: nb-theme(font-size);
+        border-radius: nb-theme(radius);
+        background-color: nb-theme(color-bg);
+        .dropdown-item.active, .dropdown-item:active {
+            background-color: nb-theme(color-primary);;
+        }
+    }
+}

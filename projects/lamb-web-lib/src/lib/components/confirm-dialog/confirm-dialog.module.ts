@@ -27,7 +27,7 @@
 import { NgModule } from '@angular/core';
 import { LambConfirmDialogComponent } from './confirm-dialog.component';
 import { LambConfirmDialogService } from './confirm-dialog.service';
-import { LambModalModule } from '../modal';
+import { LambModalModule } from '../modal/modal.module';
 
 export { LambConfirmDialogService } from './confirm-dialog.service';
 

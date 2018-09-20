@@ -10,7 +10,7 @@
     }
 
     .nav-item-group-title {
-        color:  nb-theme(color-white);
+        color: nb-theme(color-white);
         background-color: nb-theme(color-secondary);
     }
 
@@ -18,17 +18,18 @@
         .nav-link {
             &:not(.disabled) {
                 &.active {
-                    border-color: nb-theme(color-primary);
-                    background-color: nb-theme(lamb-menu-hover);
+                    border-color: nb-theme(menu-active-bg) !important;
+                    // background-color: nb-theme(lamb-menu-hover);
+                    background-color: rgba($color: nb-theme(menu-active-bg), $alpha: 0.1);
                     &:focus,
                     &:hover {
-                        background-color: nb-theme(lamb-menu-hover);
-                        border-color: nb-theme(color-primary);
+                        background-color: rgba($color: nb-theme(menu-active-bg), $alpha: 0.1);
+                        border-color: nb-theme(menu-active-bg);
                     }
                 }
                 &:focus,
                 &:hover {
-                    background-color: nb-theme(lamb-menu-hover);
+                    background-color: rgba($color: nb-theme(menu-active-bg), $alpha: 0.1);
                     border-color: nb-theme(color-fg);
                 }
             }

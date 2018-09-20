@@ -1,0 +1,7 @@
+/** Importante */
+@mixin lamb-form-label-required-theme() {
+    .col-form-label.required::after {
+        content: ' *';
+        color: nb-theme(color-danger);;
+    }
+}

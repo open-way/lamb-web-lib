@@ -7,6 +7,6 @@ export * from './lib/lamb-web-lib.component';
 export * from './lib/lamb-web-lib.module';
 
 /** Components */
-export * from './lib/components';
+export * from './lib/components/index';
 
 /** Styles */

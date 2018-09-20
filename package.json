@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4111",
     "build": "ng build",
     "build-lamb-web-lib": "ng build --prod lamb-web-lib && npm run build-lamb-web-lib-styles && npm run build-lamb-web-lib-assets",
     "build-lamb-web-lib-styles": "cpx \"./projects/lamb-web-lib/src/lib/**/_*.scss\" \"./dist/lamb-web-lib/lib\"",

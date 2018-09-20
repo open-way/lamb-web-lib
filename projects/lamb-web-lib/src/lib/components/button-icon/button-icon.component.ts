@@ -14,11 +14,13 @@ export class LambButtonIconComponent implements OnInit {
   @Input() onlyIcon: boolean;
   @Input() icon: string;
   @Input() title: string;
+  @Input() size: string;
 
   constructor() {
     this.colorClass = 'btn-light';
     this.icon = 'fa fa-plus-circle';
     this.label = 'New';
+    this.size = 'lg';
   }
 
   ngOnInit() {

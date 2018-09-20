@@ -1,3 +1,55 @@
-<p>
-  tabs works!
-</p>
+<nb-card>
+  <nb-card-body>
+    <h3>Horizontal</h3>
+
+    <lamb-tab-group justify="start">
+      <ng-template lambTabGroupTitle>
+        <span>Flujo del proceso</span>
+      </ng-template>
+      <lamb-tab>
+        <ng-template lambTabTitle>
+          <span><i class="fa fa-home lamb-icon"></i></span> Tab 1
+        </ng-template>
+        <ng-template lambTabContent>
+          Conenido del tab 1
+        </ng-template>
+      </lamb-tab>
+      <lamb-tab icon="fa fa-list-alt" title="Tab 2">
+        <ng-template lambTabContent>
+          Contenido del tab 2
+        </ng-template>
+      </lamb-tab>
+      <lamb-tab icon="fa" disabled="true" title="Disabled">
+        <ng-template lambTabContent>
+          Contenido del Desabilitado
+        </ng-template>
+      </lamb-tab>
+    </lamb-tab-group>
+
+    <h3>Vertical</h3>
+    <lamb-tab-group justify="start" orientation="vertical">
+      <ng-template lambTabGroupTitle>
+        <span>Flujo del proceso</span>
+      </ng-template>
+      <lamb-tab>
+        <ng-template lambTabTitle>
+          <span><i class="fa fa-home lamb-icon"></i></span> Tab 1
+        </ng-template>
+        <ng-template lambTabContent>
+          Conenido del tab 1
+        </ng-template>
+      </lamb-tab>
+      <lamb-tab icon="fa fa-list-alt" title="Tab 2">
+        <ng-template lambTabContent>
+          Contenido del tab 2
+        </ng-template>
+      </lamb-tab>
+      <lamb-tab icon="fa" disabled="true" title="Disabled">
+        <ng-template lambTabContent>
+          Contenido del Desabilitado
+        </ng-template>
+      </lamb-tab>
+    </lamb-tab-group>
+
+  </nb-card-body>
+</nb-card>

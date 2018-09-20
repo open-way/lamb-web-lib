@@ -5,6 +5,6 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
 
-export * from '@lamb/menu/menu.module';
-export * from '@lamb/menu/menu.service';
-export * from '@lamb/menu/menu-item';
+export * from './menu.module';
+export * from './menu.service';
+export * from './menu-item';

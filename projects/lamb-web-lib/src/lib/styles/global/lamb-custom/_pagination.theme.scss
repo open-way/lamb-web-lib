@@ -1,0 +1,11 @@
+@mixin lamb-pagination-theme() {
+    .page-item {
+        &.active {
+            .page-link {
+                color: nb-theme(color-bg);
+                background-color: nb-theme(color-secondary);
+                border-color:nb-theme(color-secondary);
+            }
+        }
+    }
+}
