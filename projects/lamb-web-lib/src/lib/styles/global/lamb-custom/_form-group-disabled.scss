@@ -1,0 +1,16 @@
+@mixin lamb-form-group-disabled-theme() {
+    .lamb-fg-disabled {
+        cursor: not-allowed;
+        label {
+            pointer-events: none;
+        }
+        input {
+            pointer-events: none;
+            background-color: rgba($color: nb-theme(menu-active-bg), $alpha: 0.1); 
+        }
+        select {
+            pointer-events: none;
+            background-color: rgba($color: nb-theme(menu-active-bg), $alpha: 0.1); 
+        }
+    }
+}

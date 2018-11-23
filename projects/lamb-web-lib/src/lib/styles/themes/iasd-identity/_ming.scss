@@ -1,0 +1,12 @@
+@import '~@nebular/theme/styles/theming';
+@import '../default';
+
+// $nb-enabled-themes: (lamb-ming);
+
+$theme-ming: (
+    header-bg: #3e8391,
+    color-primary: #3e8391,
+    header-fg: #f7fafb,
+);
+
+// $nb-themes: nb-register-theme($theme, lamb-ming, lamb-default);

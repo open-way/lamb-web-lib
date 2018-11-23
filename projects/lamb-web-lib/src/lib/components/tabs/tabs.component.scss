@@ -11,6 +11,9 @@ ul {
     font-weight: 400;
     text-transform: uppercase;
     padding: 0.5rem 1rem;
+    /deep/ i {
+        width: 50rem;
+    }
 }
 .lamb-nav-group-title {
     margin-bottom: 0 !important;
@@ -22,11 +25,15 @@ ul {
     .nav-link {
         cursor: pointer;
         font-size: 0.7rem;
+        display: inline-flex;
         &.lamb-nav-vertical {
             border-right: 0.214rem solid transparent;
+            display: inline-flex;
+            min-height: 2.5rem;
         }
         &.lamb-nav-horizontal {
             border-bottom: 0.214rem solid transparent;
+            display: inline-flex;
         }
         &:not(.disabled) {
             &.active {

@@ -1,0 +1,11 @@
+@import '~@nebular/theme/styles/theming';
+@import '../default';
+
+// $nb-enabled-themes: (lamb-emperor);
+
+$theme-emperor: (
+    header-fg: #f7fafb,
+    header-bg: #4b207f,
+);
+
+// $nb-themes: nb-register-theme($theme, lamb-emperor, lamb-default);

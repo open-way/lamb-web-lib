@@ -1,0 +1,20 @@
+@import '~@nebular/theme/styles/theming';
+@import '../default';
+
+// $nb-enabled-themes: (lamb-earth);
+
+$theme-earth: (
+    header-fg: #f7fafb,
+    header-bg: #5e3929,
+
+    menu-active-bg: #ffa92d,
+    menu-submenu-active-bg:#ffa92d,
+    menu-submenu-hover-bg: #ffa92d,
+  
+    // color-success: #ffa92d,
+  
+    popover-border: #5e3929,
+    context-menu-active-bg: color-primary,
+);
+
+// $nb-themes: nb-register-theme($theme, lamb-earth, lamb-default);

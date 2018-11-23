@@ -10,7 +10,7 @@
         }
         &:nth-child(odd) {
             td, th {
-                background-color: nb-theme(lamb-menu-hover); // Choose your own color here
+                background-color: rgba($color: nb-theme(menu-active-bg), $alpha: 0.1); // Choose your own color here
             }
         }
     }

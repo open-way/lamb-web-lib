@@ -1,0 +1,32 @@
+@import '~@nebular/theme/styles/theming';
+@import '../default';
+
+$theme-grapevine: (
+    header-fg: #f7fafb,
+    header-bg: #7f264a,
+
+    sidebar-header-gap: 1.25rem,
+    font-main:
+  unquote(
+    '"ProximaNova", "-apple-system", "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+    ),
+    color-fg-highlight:#ffa92d,
+    form-control-selected-border-color: #7f264a,
+    radius: 0,
+    layout-bg: #fbf9f3,
+    link-color: #7f264a, /** Todos las atiketas <a>*/
+    link-color-hover: #7f264a,
+
+    user-menu-border:#7f264a, /** border del menu del usuario profile */
+    user-menu-active-bg: rgba(127, 38, 74, 0.1), /** Color 'li' de las opciones del menu cuando hace 'active' */
+    user-menu-active-fg: #7f264a,/** Color de texto active los 'li' del menu del user profile  */
+
+    // popover-border: #7f264a,
+    context-menu-active-bg: #7f264a,
+    context-menu-border: #7f264a,
+
+    color-primary: #7f264a,
+    color-secondary:#ffa92d,
+);
+
+// $nb-themes: nb-register-theme($theme, lamb-grapevine, lamb-default);

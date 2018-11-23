@@ -1,0 +1,11 @@
+@import '~@nebular/theme/styles/theming';
+@import '../default';
+
+// $nb-enabled-themes: (lamb-tree-frog);
+
+$theme-tree-frog: (
+    header-fg: #f7fafb,
+    header-bg: #448d21,
+);
+
+// $nb-themes: nb-register-theme($theme, lamb-tree-frog, lamb-default);

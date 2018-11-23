@@ -1,0 +1,20 @@
+@import '~@nebular/theme/styles/theming';
+@import '../default';
+
+// $nb-enabled-themes: (lamb-denim);
+
+$theme-denim: (
+    header-bg: #2f557f,
+    header-fg: #f7fafb,
+
+    sidebar-header-gap: 1.25rem,
+  
+    menu-active-bg: #2f557f,
+    menu-submenu-active-bg:#2f557f,
+    menu-submenu-hover-bg: #2f557f,
+  
+    popover-border: #2f557f,
+    context-menu-active-bg: color-primary,
+);
+
+// $nb-themes: nb-register-theme($theme, lamb-denim, lamb-default);

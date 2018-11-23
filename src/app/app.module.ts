@@ -31,7 +31,7 @@ export const NEBULAR_MODULES: any[] = [
   NbCardModule,
   NbSearchModule,
   NbMenuModule.forRoot(),
-  NbThemeModule.forRoot({ name: 'default' }),
+  NbThemeModule.forRoot({ name: 'lamb-default' }),
   NbSidebarModule.forRoot(),
 ];
 

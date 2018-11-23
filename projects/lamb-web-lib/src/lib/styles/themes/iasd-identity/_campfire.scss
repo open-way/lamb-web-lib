@@ -1,0 +1,11 @@
+@import '~@nebular/theme/styles/theming';
+@import '../default';
+
+// $nb-enabled-themes: (lamb-campfire);
+
+$theme-campfire: (
+    header-fg: #f7fafb,
+    header-bg: #e36520,
+);
+
+// $nb-themes: nb-register-theme($theme, lamb-campfire, lamb-default);

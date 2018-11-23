@@ -1,0 +1,23 @@
+@mixin lamb-show-error-theme() {
+    form .form-control {
+        &.ng-valid:not(form) {
+            // border-left: 2px solid nb-theme(color-success);
+            /* green */
+        }
+        &.ng-invalid:not(form) {
+            border-left: 2px solid nb-theme(color-danger);
+            /* red */
+        }
+        @include nb-for-theme(corporate) {
+            &.ng-valid:not(form) {
+                // border: 1px solid nb-theme(color-success);
+                /* green */
+            }
+            &.ng-invalid:not(form) {
+                border: 1px solid nb-theme(color-danger);
+                /* red */
+            }
+        }
+      
+    }
+}

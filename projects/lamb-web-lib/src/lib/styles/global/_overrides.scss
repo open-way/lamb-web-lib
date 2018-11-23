@@ -6,6 +6,8 @@
 @import 'lamb-custom/form-label-required';
 @import 'lamb-custom/pagination';
 @import 'lamb-custom/autocomplete';
+@import 'lamb-custom/show-error';
+@import 'lamb-custom/form-group-disabled';
 
 @mixin lamb-theme-overrides() {
     @include lamb-nebular-forms-theme();
@@ -14,4 +16,6 @@
     @include lamb-form-label-required-theme();
     @include lamb-pagination-theme();
     @include lamb-autocomplete-theme();
+    @include lamb-show-error-theme();
+    @include lamb-form-group-disabled-theme();
 }

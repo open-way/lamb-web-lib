@@ -1,9 +1,10 @@
 @import '~@nebular/theme/styles/theming';
 @import '~@nebular/theme/styles/themes/default';
 
-$nb-themes: nb-register-theme((
-  form-control-border-width: 1px,
+$nb-enabled-themes: (lamb-default);
 
+$theme: (
+  form-control-border-width: 1px,
   menu-icon-font-size: 1.8rem, // Normal 1.8rem
   menu-icon-margin: 0 0.6rem 0,
   menu-submenu-item-container-padding: 0,
@@ -26,5 +27,12 @@ $nb-themes: nb-register-theme((
   // default size
   // btn-padding-y-sm: 0.625rem,
   btn-padding-y-sm: 0.25rem,
+  form-control-padding: none, /** Esto es un arreglo para tener el control con los estilos de bootstrap */
 
-), default, default);
+  card-padding: 0.6rem,
+  card-header-font-size: 0.8rem,
+  layout-padding: 1.25rem 1.25rem 0.75rem,
+);
+
+// register the theme
+$nb-themes: nb-register-theme($theme, lamb-default, default);

@@ -9,4 +9,7 @@
         @include install-placeholder(nb-theme(form-control-placeholder-color),
             nb-theme(form-control-placeholder-font-size));
     }
+    select.form-control:not([size]):not([multiple]) {
+        height: auto;
+    }
 }
