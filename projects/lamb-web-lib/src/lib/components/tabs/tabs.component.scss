@@ -25,15 +25,14 @@ ul {
     .nav-link {
         cursor: pointer;
         font-size: 0.7rem;
-        display: inline-flex;
         &.lamb-nav-vertical {
             border-right: 0.214rem solid transparent;
-            display: inline-flex;
+            display: flex;
             min-height: 2.5rem;
         }
         &.lamb-nav-horizontal {
             border-bottom: 0.214rem solid transparent;
-            display: inline-flex;
+            display: flex;
         }
         &:not(.disabled) {
             &.active {
